@@ -1,0 +1,16 @@
+[Unit]
+Description=STUN server
+After=network.target
+
+[Service]
+EnvironmentFile=-/etc/sysconfig/stunserver
+Type=simple
+ExecStart=/usr/bin/stunserver $STUNSERVER_OPTIONS
+User=nobody
+Group=nobody
+Restart=on-failure
+ProtectSystem=full
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
