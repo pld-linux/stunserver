@@ -4,12 +4,12 @@
 #
 Summary:	STUNTMAN STUN server
 Name:		stunserver
-Version:	1.2.9
-Release:	3
+Version:	1.2.13
+Release:	1
 License:	Apache v2.0
 Group:		Networking/Daemons
 Source0:	http://www.stunprotocol.org/%{name}-%{version}.tgz
-# Source0-md5:	cfd13029362997c1d6e3299b38d520d6
+# Source0-md5:	c56b74796c5447850ab29d37d947f6c6
 Source1:	%{name}.service
 Source2:	%{name}.sysconfig
 Patch0:		%{name}-openssl.patch
