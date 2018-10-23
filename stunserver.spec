@@ -16,6 +16,7 @@ Patch0:		%{name}-openssl.patch
 URL:		http://www.stunprotocol.org/
 BuildRequires:	rpmbuild(macros) >= 1.647
 Requires(post,preun,postun):	systemd-units >= 38
+BuildRequires:	boost-devel
 BuildRequires:	openssl-devel
 Requires:	systemd-units >= 0.38
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
