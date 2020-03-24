@@ -4,15 +4,14 @@
 #
 Summary:	STUNTMAN STUN server
 Name:		stunserver
-Version:	1.2.13
+Version:	1.2.15
 Release:	1
 License:	Apache v2.0
 Group:		Networking/Daemons
 Source0:	http://www.stunprotocol.org/%{name}-%{version}.tgz
-# Source0-md5:	c56b74796c5447850ab29d37d947f6c6
+# Source0-md5:	8a923faa15fff05cbfb77330e5ebf116
 Source1:	%{name}.service
 Source2:	%{name}.sysconfig
-Patch0:		%{name}-openssl.patch
 URL:		http://www.stunprotocol.org/
 BuildRequires:	rpmbuild(macros) >= 1.647
 Requires(post,preun,postun):	systemd-units >= 38
@@ -41,10 +40,11 @@ This package contains the client application.
 
 %prep
 %setup -qn %{name}
-%patch0 -p1
 
 %build
 %{__make} \
+	CC="%{__cc}" \
+	CXX="%{__cxx}" \
 	RELEASE_FLAGS="%{rpmcxxflags}" \
 	CXX_FLAGS="%{rpmcxxflags}" \
 	LDFLAGS="%{rpmldflags}"
