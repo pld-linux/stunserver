@@ -5,7 +5,7 @@
 Summary:	STUNTMAN STUN server
 Name:		stunserver
 Version:	1.2.15
-Release:	2
+Release:	3
 License:	Apache v2.0
 Group:		Networking/Daemons
 Source0:	http://www.stunprotocol.org/%{name}-%{version}.tgz
